@@ -1,0 +1,17 @@
+#!/bin/sh
+
+[ "$ACTION" = "released" ] || exit 0
+
+SEEN=${SEEN:-0}
+
+if [ "$SEEN" -ge 3 ]; then
+  logger -t powerbtn "Long press (${SEEN}s) -> shutdown"
+  /usr/bin/python3 /root/oled_msg.py "Shutting down..." 2>/dev/null
+  exec /sbin/poweroff
+elif [ "$SEEN" -ge 1 ]; then
+  logger -t powerbtn "Short press (${SEEN}s) -> reboot"
+  /usr/bin/python3 /root/oled_msg.py "Rebooting..." 2>/dev/null
+  exec /sbin/reboot
+fi
+
+exit 0
