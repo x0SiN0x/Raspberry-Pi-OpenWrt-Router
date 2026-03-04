@@ -7,6 +7,7 @@
   <img src="https://img.shields.io/badge/OS-OpenWrt_24.10-00a3e0?style=flat-square&logo=openwrt&logoColor=white" alt="OpenWrt">
   <img src="https://img.shields.io/badge/display-SH1106_OLED-333?style=flat-square" alt="SH1106 OLED">
   <img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="MIT License">
+  <img src="sample.jpeg" alt="Sample" width="500">
 </p>
 
 ---
